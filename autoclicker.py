@@ -9,18 +9,18 @@ from adafruit_hid.mouse import Mouse
 m = Mouse(usb_hid.devices)
 
 # Init button
-button = digitalio.DigitalInOut(board.GP18)
+button = digitalio.DigitalInOut(board.GP19)
 button.switch_to_input(pull=digitalio.Pull.DOWN)
 
 # Reset button
-buttonReset = digitalio.DigitalInOut(board.GP20)
+buttonReset = digitalio.DigitalInOut(board.GP18)
 buttonReset.switch_to_input(pull=digitalio.Pull.DOWN)
 
 # Leds
-led1 = pwmio.PWMOut(board.GP10, frequency=1000, duty_cycle=0)
-led2 = pwmio.PWMOut(board.GP11, frequency=1000, duty_cycle=0)
-led3 = pwmio.PWMOut(board.GP12, frequency=1000, duty_cycle=0)
-led4 = pwmio.PWMOut(board.GP13, frequency=1000, duty_cycle=0)
+led1 = pwmio.PWMOut(board.GP12, frequency=1000, duty_cycle=0)
+led2 = pwmio.PWMOut(board.GP13, frequency=1000, duty_cycle=0)
+led3 = pwmio.PWMOut(board.GP14, frequency=1000, duty_cycle=0)
+led4 = pwmio.PWMOut(board.GP15, frequency=1000, duty_cycle=0)
 
 # Six seconds between each click
 duty_max = 6000
